@@ -1,9 +1,13 @@
 {
-  "version_name": "4.6.4",
-  "version_code": 65,
-  "aurora_build": "https://www.auroraoss.com/AuroraStore/Release/AuroraStore-4.6.4.apk",
-  "fdroid_build": "",
-  "changelog": "Changelog : v4.6.4\n • Fixed issues with shared library installation for apps like Chrome and WebView\n •Support for login into personal account using microG\n • Fixed an issue with auth verification",
-  "size": 7431013,
-  "updated_on": "Jan 10, 2024"
+  "version_name": "0.9.0-beta",
+  "version_code": "1",
+  "download_url": "https://github.com/Milordick/RuRestore/releases/download/v0.9.0-beta/RuRestore.apk",
+  "icon_url": "https://raw.githubusercontent.com/Milordick/RuRestore/main/assets/icon.png",
+  "sha1": "",
+  "sha256": "65caabefcdf83b8c1bab32f594cbed9e4b7ba742911e9781e880627722bc741b",
+  "changelog": "RuRestore v0.9.0-beta:\n• Полноценный нативный клиент RuStore на Jetpack Compose\n• Экстремальная оптимизация размера до 9.1 МБ\n• Полное отключение LeakCanary и нулевая телеметрия\n• Поддержка всех архитектур (arm64, armv7, x86, x86_64)",
+  "size": "9472624",
+  "last_commit": "",
+  "updated_on": "2026-10-22",
+  "timestamp": "0"
 }

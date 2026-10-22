@@ -29,9 +29,9 @@ object Constants {
     const val SHARE_URL = "https://www.rustore.ru/catalog/app/"
 
     const val UPDATE_URL_VANILLA =
-        "https://auroraoss.com/downloads/AuroraStore/Feeds/release_feed.json"
+        "https://raw.githubusercontent.com/Milordick/RuRestore/main/updates.json"
     const val UPDATE_URL_NIGHTLY =
-        "https://auroraoss.com/downloads/AuroraStore/Feeds/nightly_feed.json"
+        "https://raw.githubusercontent.com/Milordick/RuRestore/main/updates.json"
 
     // Channel IDs carry a version suffix where the importance changed from a previous
     // release: Android ignores importance edits on an already-created channel, so a new ID
