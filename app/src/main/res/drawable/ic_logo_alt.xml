@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ SPDX-FileCopyrightText: 2026 RuRestore
+  ~ SPDX-License-Identifier: GPL-3.0-or-later
+  -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="512"
+    android:viewportHeight="512">
+
+    <!-- Фон скругленный (M3 Dark Emerald Surface) -->
+    <path
+        android:fillColor="#0F1512"
+        android:pathData="M128,0 L384,0 A128,128 0 0,1 512,128 L512,384 A128,128 0 0,1 384,512 L128,512 A128,128 0 0,1 0,384 L0,128 A128,128 0 0,1 128,0 Z" />
+
+    <!-- Левая стойка буквы Р (Капсула - Secondary Container) -->
+    <path
+        android:fillColor="#354B41"
+        android:pathData="M174,120 A38,38 0 0,1 212,158 V354 A38,38 0 0,1 174,392 A38,38 0 0,1 136,354 V158 A38,38 0 0,1 174,120 Z" />
+
+    <!-- Чаша буквы Р (Круг внахлёст - Primary Pastel) -->
+    <path
+        android:fillColor="#89F8C7"
+        android:pathData="M276,120 A100,100 0 0,1 376,220 A100,100 0 0,1 276,320 A100,100 0 0,1 176,220 A100,100 0 0,1 276,120 Z" />
+
+    <!-- Минималистичная стрелка загрузки внутри круга -->
+    <path
+        android:pathData="M276,184 V252 M246,226 L276,256 L306,226"
+        android:strokeColor="#003824"
+        android:strokeWidth="24"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+</vector>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <base-config>
+        <trust-anchors>
+            <certificates src="system" />
+            <certificates src="@raw/ministry_of_digital_root" />
+            <certificates src="@raw/ministry_of_digital_sub_2024" />
+        </trust-anchors>
+    </base-config>
+    <domain-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system" />
+            <certificates src="@raw/ministry_of_digital_root" />
+            <certificates src="@raw/ministry_of_digital_sub_2024" />
+        </trust-anchors>
+        <domain includeSubdomains="true">rustore.ru</domain>
+        <domain includeSubdomains="true">smailru.net</domain>
+        <domain includeSubdomains="true">vkuserphoto.ru</domain>
+    </domain-config>
+</network-security-config>

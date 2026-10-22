@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ SPDX-FileCopyrightText: 2021 Aurora OSS
+  ~ SPDX-FileCopyrightText: 2023 grrfe <grrfe@420blaze.it>
+  ~ SPDX-License-Identifier: GPL-3.0-or-later
+  -->
+<resources>
+    <string-array name="pref_updates_auto">
+        <item>@string/pref_updates_auto_off</item>
+        <item>@string/pref_updates_auto_notify</item>
+        <item>@string/pref_updates_auto_install</item>
+    </string-array>
+
+    <string-array name="pref_updates_check_frequency_options">
+        <item>@string/pref_updates_check_frequency_3h</item>
+        <item>@string/pref_updates_check_frequency_6h</item>
+        <item>@string/pref_updates_check_frequency_12h</item>
+        <item>@string/pref_updates_check_frequency_24h</item>
+        <item>@string/pref_updates_check_frequency_3d</item>
+        <item>@string/pref_updates_check_frequency_7d</item>
+        <item>@string/pref_updates_check_frequency_15d</item>
+    </string-array>
+
+    <string-array name="link_urls">
+        <item>https://github.com/Milordick/RuRestore</item>
+        <item>https://github.com/Milordick/RuRestore</item>
+        <item>https://github.com/Milordick</item>
+        <item>https://pay.cloudtips.ru/p/0ef570e5</item>
+        <item>https://github.com/Milordick/RuRestore/blob/main/LICENSE</item>
+    </string-array>
+
+    <string-array name="link_titles">
+        <item>@string/title_about</item>
+        <item>@string/source_code_title</item>
+        <item>@string/about_developer_title</item>
+        <item>@string/about_donate_title</item>
+        <item>@string/menu_license</item>
+    </string-array>
+
+    <string-array name="link_subtitle">
+        <item>@string/about_aurora_store_subtitle</item>
+        <item>@string/source_code_subtitle</item>
+        <item>@string/about_developer_summary</item>
+        <item>@string/about_donate_summary</item>
+        <item>@string/license_subtitle</item>
+    </string-array>
+
+    <string-array name="pref_theme_style">
+        <item>@string/pref_theme_style_system</item>
+        <item>@string/pref_theme_style_light</item>
+        <item>@string/pref_theme_style_dark</item>
+    </string-array>
+
+    <string-array name="pref_default_tab">
+        <item>@string/title_apps</item>
+        <item>@string/title_games</item>
+        <item>@string/title_updates</item>
+    </string-array>
+
+    <string-array name="filterRatingValues" translatable="false">
+        <item>0</item>
+        <item>1.0</item>
+        <item>2.0</item>
+        <item>3.0</item>
+        <item>4.0</item>
+        <item>4.5</item>
+    </string-array>
+
+    <string-array name="filterRatingLabels" translatable="false">
+        <item>@string/action_filter_all</item>
+        <item> 1★ + </item>
+        <item> 2★ + </item>
+        <item> 3★ + </item>
+        <item> 4★ + </item>
+        <item> 4.5★ + </item>
+    </string-array>
+
+    <string-array name="filterDownloadsValues" translatable="false">
+        <item>0</item>
+        <item>100000</item>
+        <item>1000000</item>
+        <item>10000000</item>
+        <item>50000000</item>
+        <item>100000000</item>
+    </string-array>
+
+    <string-array name="filterDownloadsLabels" translatable="false">
+        <item>@string/action_filter_all</item>
+        <item> 100K + </item>
+        <item> 1M + </item>
+        <item> 10M + </item>
+        <item> 50M + </item>
+        <item> 100M + </item>
+    </string-array>
+
+    <string-array name="pref_vending_version" translatable="false">
+        <item>@string/pref_vending_version_device</item>
+        <item>7.9.80.Q-all [0] [PR] 159305549</item>
+        <item>22.0.17-21 [0] [PR] 332555730</item>
+    </string-array>
+
+    <string-array name="pref_vending_version_codes" translatable="false">
+        <item>-1</item>
+        <item>80798000</item>
+        <item>82201710</item>
+    </string-array>
+</resources>

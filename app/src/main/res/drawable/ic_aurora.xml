@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ SPDX-FileCopyrightText: 2026 RuRestore
+  ~ SPDX-License-Identifier: GPL-3.0-or-later
+  -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="512"
+    android:viewportHeight="512">
+
+    <!-- Левая стойка буквы Р (Капсула) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.75"
+        android:pathData="M174,120 A38,38 0 0,1 212,158 V354 A38,38 0 0,1 174,392 A38,38 0 0,1 136,354 V158 A38,38 0 0,1 174,120 Z" />
+
+    <!-- Чаша буквы Р (Круг со стрелкой-вырезом через evenOdd) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillType="evenOdd"
+        android:pathData="M276,120 A100,100 0 0,1 376,220 A100,100 0 0,1 276,320 A100,100 0 0,1 176,220 A100,100 0 0,1 276,120 Z M288.0,184.0L287.1,179.4L285.3,176.4L282.7,174.0L279.5,172.5L274.8,172.1L271.4,172.9L267.5,175.5L265.4,178.3L264.0,184.0L264.0,227.0L253.6,216.7L250.6,214.9L247.2,214.1L242.5,214.5L239.3,216.0L236.0,219.3L234.2,223.7L234.2,228.3L236.7,233.6L267.5,264.5L270.3,266.6L273.7,267.8L278.3,267.8L283.6,265.3L314.5,234.5L316.6,231.7L317.8,228.3L317.8,223.7L315.3,218.4L311.7,215.4L306.0,214.0L302.5,214.5L299.3,216.0L288.0,227.0Z" />
+</vector>

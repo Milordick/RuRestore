@@ -1,0 +1,178 @@
+/*
+ * SPDX-FileCopyrightText: 2025 The Calyx Institute
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ */
+
+package com.aurora.store.compose.ui.about
+
+import android.widget.Toast
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.requiredSize
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.dimensionResource
+import androidx.compose.ui.res.stringArrayResource
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.tooling.preview.PreviewWrapper
+import coil3.compose.AsyncImage
+import coil3.request.ImageRequest
+import com.aurora.extensions.browse
+import com.aurora.extensions.copyToClipBoard
+import com.aurora.extensions.viewExternal
+import com.aurora.store.BuildConfig.VERSION_CODE
+import com.aurora.store.BuildConfig.VERSION_NAME
+import com.aurora.store.R
+import com.aurora.store.compose.composable.LinkListItem
+import com.aurora.store.compose.composable.TopAppBar
+import com.aurora.store.compose.preview.ThemePreviewProvider
+import com.aurora.store.data.model.Link
+
+@Composable
+fun AboutScreen() {
+    var shouldShowAboutDialog by rememberSaveable { mutableStateOf(false) }
+
+    if (shouldShowAboutDialog) {
+        AboutDialog(onDismiss = { shouldShowAboutDialog = false })
+    }
+
+    ScreenContent(
+        onAboutAurora = { shouldShowAboutDialog = true }
+    )
+}
+
+@Composable
+private fun ScreenContent(onAboutAurora: () -> Unit = {}) {
+    val context = LocalContext.current
+
+    val linkURLS = stringArrayResource(R.array.link_urls)
+    val linkTitles = stringArrayResource(R.array.link_titles)
+    val linkSummary = stringArrayResource(R.array.link_subtitle)
+    val linkIcons = intArrayOf(
+        R.drawable.ic_about,
+        R.drawable.ic_code,
+        R.drawable.ic_aurora,
+        R.drawable.ic_favorite_checked,
+        R.drawable.ic_license
+    )
+
+    val links = linkURLS.mapIndexed { index, url ->
+        Link(
+            id = index,
+            title = linkTitles[index],
+            subtitle = linkSummary[index],
+            url = url,
+            icon = linkIcons[index]
+        )
+    }
+
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = stringResource(R.string.title_about)
+            )
+        }
+    ) { paddingValues ->
+        LazyColumn(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(paddingValues),
+            verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.spacing_xsmall))
+        ) {
+            stickyHeader {
+                Surface(modifier = Modifier.fillMaxWidth()) {
+                    BrandHeader()
+                }
+            }
+            items(items = links, key = { item -> item.id }) { link ->
+                LinkListItem(
+                    link = link,
+                    onClick = {
+                        when {
+                            link.id == 0 -> onAboutAurora()
+                            link.url.startsWith("http") -> context.browse(link.url)
+                            // upi:// opens a payment app; if none is installed (or for crypto
+                            // addresses, which have no handler) copy the value to the clipboard.
+                            link.url.startsWith("upi") && context.viewExternal(link.url) -> Unit
+                            else -> {
+                                context.copyToClipBoard(link.url)
+                                Toast.makeText(
+                                    context,
+                                    R.string.toast_clipboard_copied,
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                            }
+                        }
+                    }
+                )
+            }
+        }
+    }
+}
+
+@Composable
+private fun BrandHeader() {
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(dimensionResource(R.dimen.spacing_medium)),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.spacing_xsmall))
+    ) {
+        AsyncImage(
+            model = ImageRequest.Builder(LocalContext.current)
+                .data(R.mipmap.ic_launcher)
+                .build(),
+            contentDescription = null,
+            contentScale = ContentScale.Crop,
+            modifier = Modifier
+                .requiredSize(dimensionResource(R.dimen.icon_size))
+                .clip(CircleShape)
+        )
+        Text(
+            text = stringResource(R.string.app_name),
+            style = MaterialTheme.typography.titleLarge,
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis
+        )
+        Text(
+            text = stringResource(R.string.version, VERSION_NAME, VERSION_CODE),
+            style = MaterialTheme.typography.bodyMedium,
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis
+        )
+        Text(
+            text = stringResource(R.string.made_with_love),
+            style = MaterialTheme.typography.bodyMedium,
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis
+        )
+    }
+}
+
+@PreviewWrapper(ThemePreviewProvider::class)
+@Preview
+@Composable
+private fun AboutScreenPreview() {
+    ScreenContent()
+}

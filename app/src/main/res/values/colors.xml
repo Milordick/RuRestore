@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ SPDX-FileCopyrightText: 2026 RuRestore
+  ~ SPDX-License-Identifier: GPL-3.0-or-later
+  -->
+<resources>
+    <!--Common Colors-->
+    <color name="colorAccent">#89F8C7</color>
+    <color name="ic_launcher_background">#0F1512</color>
+</resources>
