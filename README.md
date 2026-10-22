@@ -1,4 +1,8 @@
-# RuRestore v0.9.0-beta
+<p align="center">
+  <img src="assets/icon.png" width="128" height="128" alt="RuRestore Icon" />
+</p>
+
+<h1 align="center">RuRestore v0.9.0-beta</h1>
 
 <p align="center">
   <strong>Автономный, легковесный и независимый FOSS-клиент каталога приложений RuStore для Android.</strong>
@@ -8,10 +12,10 @@
   <a href="https://github.com/Milordick/RuRestore/releases/latest"><img src="https://img.shields.io/badge/LATEST%20RELEASE-V0.9.0--BETA-7950f2?style=for-the-badge&logo=github&logoColor=white" alt="Latest Release"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/LICENSE-GPL%20V3-007ec6?style=for-the-badge" alt="License"></a>
   <img src="https://img.shields.io/badge/PLATFORM-ANDROID%206.0%2B%20(API%2023--37)-4caf50?style=for-the-badge" alt="Platform">
-  <img src="https://img.shields.io/badge/TRACKERS-0%20(ZERO%20TRACKERS)-success?style=for-the-badge" alt="Zero Trackers">
 </p>
 <p align="center">
   <img src="https://img.shields.io/badge/ARCHITECTURE-FAT%20APK%20(ARM64%20%7C%20ARMV7%20%7C%20X86%20%7C%20X86__64)-f0652f?style=for-the-badge" alt="Architecture">
+  <img src="https://img.shields.io/badge/TRACKERS-0%20(ZERO%20TRACKERS)-success?style=for-the-badge" alt="Zero Trackers">
   <a href="https://pay.cloudtips.ru/p/0ef570e5" target="_blank"><img src="https://img.shields.io/badge/SUPPORT-DONATE-ff5252?style=for-the-badge" alt="Donate"></a>
 </p>
 

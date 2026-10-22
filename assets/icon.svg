@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <!-- Фон: M3 Dark Emerald Surface -->
+  <rect width="512" height="512" rx="128" fill="#0F1512" />
+
+  <!-- Левая стойка буквы Р (Капсула - Secondary Container) -->
+  <rect x="136" y="120" width="76" height="272" rx="38" fill="#354B41" />
+
+  <!-- Чаша буквы Р (Круг внахлёст - Primary Pastel) -->
+  <circle cx="276" cy="220" r="100" fill="#89F8C7" />
+
+  <!-- Минималистичная стрелка загрузки внутри круга -->
+  <path d="M 276 184 V 252 M 246 226 L 276 256 L 306 226" fill="none" stroke="#003824" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
